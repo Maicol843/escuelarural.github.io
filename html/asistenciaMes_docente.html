@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ESTILO CSS-->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <!--FONTS GOOGLE-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!--Html2 Canvas-->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--BOOTSTRAP ICON-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--GRAFICAS CHART.JS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--TITULO DE LA PAGINA-->
+    <title>Asistencia Mensual Docente</title>
+</head>
+
+<body>
+    <!--NAVEGADOR-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="inicio.html">
+                <img src="../assets/Logo_2.PNG" class="img-" width="70" alt="Logo">
+                Escuela Secundaria Rural N°4 E.V.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menú de navegación</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../html/inicio.html"><i
+                                    class="bi bi-house-fill"></i>
+                                Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-calendar-week-fill"></i> Itinerancias
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item text-light bg-dark" href="../html/registro_materias.html">Registro de materias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item text-light bg-dark" href="../html/secuencias.html">Secuencias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item text-light bg-dark" href="../html/itinerancias_mes.html">Itinerancias por mes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active text-primary" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-workspace"></i> Registro Docente
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item bg-dark active text-primary"
+                                        href="../html/asistenciaMes_docente.html">Asistencia por Mes</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item bg-dark text-secondary"
+                                        href="../html/asistenciaAnual_docente.html">Asistencia Anual</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-backpack2-fill"></i> Registro de Alumnos
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item bg-dark text-light" href="../html/datos_alumno.html">Datos
+                                        del Alumno</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item bg-dark text-light" href="../html/datos_tutor.html">Datos
+                                        del Tutor</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item bg-dark text-light"
+                                        href="../html/asistencias_alumnos.html">Asistencias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item bg-dark text-light"
+                                        href="../html/calificaciones_alumnos.html">Calificaciones</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/sedes.html"><i class="bi bi-buildings-fill"></i> Sedes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="../index.html">
+                <button type="button" class="btn bg-primary text-light"><i class="bi bi-power"></i> Cerrar
+                    Sesion</button>
+            </a>
+        </div>
+    </nav>
+    <main class="container">
+        <h1 class="text-center p-4">REGISTRO DE ASISTENCIA MENSUAL DOCENTE</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Formulario de Asistencia</h2>
+                <p class="mb-3"><i class="bi bi-1-square"></i> Complete el formulario de asistencia.</p>
+                <form id="attendanceForm">
+                    <div class="form-group mb-3">
+                        <label for="name">Docente:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Ingrese el nombre y apellido"
+                            required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="subject">Asignatura:</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Ingrese la asignatura"
+                            required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="month">Mes:</label>
+                        <select class="form-control" id="month" required>
+                            <option class="text-secondary">Seleccione el mes</option>
+                            <option value="Enero">Enero</option>
+                            <option value="Febrero">Febrero</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Mayo">Mayo</option>
+                            <option value="Junio">Junio</option>
+                            <option value="Julio">Julio</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Septiembre">Septiembre</option>
+                            <option value="Octubre">Octubre</option>
+                            <option value="Noviembre">Noviembre</option>
+                            <option value="Diciembre">Diciembre</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="campus">Sede:</label>
+                        <select class="form-control" id="campus" required>
+                            <option class="text-secondary">Seleccione la sede</option>
+                            <option value="Puesto de Marqués">Puesto de Marqués</option>
+                            <option value="La Intermedia">La Intermedia</option>
+                            <option value="Colonia San José">Colonia San José</option>
+                            <option value="El Perchel">El Perchel</option>
+                            <option value="Tumbaya Grande">Tumbaya Grande</option>
+                            <option value="Tumbaya Pueblo">Tumbaya Pueblo</option>
+                            <option value="León">León</option>
+                            <option value="Termas de Reyes">Termas de Reyes</option>
+                            <option value="Sunchal">Sunchal</option>
+                            <option value="Carahunco">Carahunco</option>
+                            <option value="San Juancito">San Juancito</option>
+                            <option value="Manantiales">Manantiales</option>
+                        </select>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center mb-3">
+                        <button type="reset" class="btn btn-info me-3"><i class="bi bi-arrow-clockwise"></i>
+                            Reestablecer</button>
+                        <button type="submit" class="btn btn-primary">Siguiente <i
+                                class="bi bi-arrow-right-circle"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Tabla de Asistencia</h2>
+                <p><i class="bi bi-2-square"></i> Marcar en la tabla los días trabajados del docente:</p>
+                <p id="teacherInfo"></p>
+                <table class="table table-bordered border-secondary">
+                    <thead>
+                        <tr>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                            <th>Sábado</th>
+                            <th>Domingo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="monthDays">
+                        <!-- Aquí se generará la tabla dinámicamente con JavaScript -->
+                    </tbody>
+                </table>
+                <div id="attendanceSummary"></div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <button id="submitAttendance" class="btn btn-primary">Siguiente <i
+                            class="bi bi-arrow-right-circle"></i></button>
+                </div>
+            </div>
+            <div class="row mt-5" id="informe-general">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="informe"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div id="tabla"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="titulo"></div>
+                        <div id="graficas"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="boton-descargar"></div>
+        </div>
+    </main>
+    <footer class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11">
+                    <h6 class="text-light mt-3 mb-2"><i class="bi bi-c-circle"></i> 2024 Ministerio de Educación de
+                        Jujuy</h6>
+                    <p class="text-light mb-1"><i class="bi bi-signpost-split-fill"></i> Sede Central: Coronel Otero 188
+                        Zona Centro - S.S. de Jujuy</p>
+                    <p class="text-light mb-1"><i class="bi bi-envelope-fill"></i> Correo: secundariarural14@gmail.com
+                    </p>
+                    <p class="text-light mb-2"><i class="fa-solid fa-terminal"></i> Diseñado por Maicol Daniel Mamani
+                        Chalco - <i class="bi bi-window-stack"></i> <a
+                            href="https://www.tudiseñoweb.com">www.tudiseñoweb.com</a></p>
+                </div>
+                <div class="col-md-1 mt-3 mb-3">
+                    <img src="../assets/Logo.PNG" width="70" alt="Logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!--BOOTSTRAP-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<!--JAVASCRIPT-->
+<script src="../js/asistenciaMes_docente.js"></script>
+
+</html>

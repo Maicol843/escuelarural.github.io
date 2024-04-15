@@ -1,0 +1,191 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    font-size: 0.9em;
+}
+
+.cerrarSesion{
+    font-size: 0.8em;
+}
+
+.navbar a {
+    font-size: 0.8em;
+}
+
+.bg-image {
+    background-image: url('../assets/Fondo.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    height: 100%;
+}
+
+.transparent-card {
+    background-color: rgba(0, 0, 0, 0.425);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+    font-family: "Fredoka", sans-serif;
+}
+
+p,
+label,
+input,
+select {
+    font-family: "Roboto Slab", serif;
+}
+
+footer p {
+    font-size: 0.8em;
+}
+
+.buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button-1 {
+    background-color: crimson;
+    color: white;
+    border-radius: 10px;
+}
+
+.button-2 {
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+}
+
+.button-3 {
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+}
+
+.button-4 {
+    background-color: darkcyan;
+    color: white;
+    border-radius: 10px;
+}
+
+.button-5 {
+    background-color: darkblue;
+    color: white;
+    border-radius: 10px;
+}
+
+.button-6 {
+    background-color: tomato;
+    color: white;
+    border-radius: 10px;
+}
+
+.button-7 {
+    background-color: mediumvioletred;
+    color: white;
+    border-radius: 10px;
+}
+
+.button-8 {
+    background-color: yellowgreen;
+    color: white;
+    border-radius: 10px;
+}
+
+.button-9 {
+    background-color: sienna;
+    color: white;
+    border-radius: 10px;
+}
+
+.button-10 {
+    background-color: slateblue;
+    color: white;
+    border-radius: 10px;
+}
+
+.button-11 {
+    background-color: turquoise;
+    color: white;
+    border-radius: 10px;
+}
+
+.button-12 {
+    background-color: orangered;
+    color: white;
+    border-radius: 10px;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th,
+td {
+    border: 1px solid #040404;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: rgb(199, 199, 199);
+    color: black;
+}
+
+/* Estilo específico para los botones dentro de la tabla */
+#tablaItinerancias .button {
+    margin: 0;
+    /* Elimina el margen para que no cambie el tamaño */
+    padding-left: 0px;
+    /* Ajusta el relleno para mantener un tamaño fijo */
+    padding-right: 0px;
+}
+
+.botones {
+    margin-top: 20px;
+}
+
+.slide-container {
+    display: flex;
+    overflow-x: auto;
+}
+
+.color-btn {
+    width: 80px;
+    margin-right: 5px;
+}
+
+.selected-cell {
+    background-color: #d9edf7;
+    /* Light blue background color for selected cell */
+}
+
+.disabled-cell {
+    background-color: #eeeeee;
+    /* Light gray background color for disabled cell */
+}

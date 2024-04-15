@@ -1,0 +1,214 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.cerrarSesion{
+    font-size: 0.8em;
+}
+
+.navbar a {
+    font-size: 0.8em;
+}
+
+.bg-image {
+    background-image: url('../assets/Fondo.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    height: 100%;
+}
+
+.transparent-card {
+    background-color: rgba(0, 0, 0, 0.425);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+    font-family: "Fredoka", sans-serif;
+}
+
+p,
+label,
+input,
+select {
+    font-family: "Roboto Slab", serif;
+}
+
+footer p {
+    font-size: 0.8em;
+}
+
+th,
+td {
+    text-align: center;
+}
+
+canvas {
+    width: 50%;
+    height: 50%;
+}
+
+/*Graficas*/
+@keyframes rellenar {
+    to {
+        stroke-dasharray: var(--porcentaje) 100;
+    }
+}
+
+.tarjetas-graficas {
+    display: flex;
+    justify-content: center;
+}
+
+.porcentajes1 span,
+.porcentajes2 span,
+.porcentajes3 span {
+    position: absolute;
+    display: flex;
+}
+
+circle {
+    fill: none;
+    stroke-width: 20;
+    transform: rotate(-90deg);
+    transform-origin: 50%;
+    stroke-dasharray: 100 100;
+    stroke: #AAA;
+}
+
+circle:nth-child(2) {
+    stroke: var(--color);
+    stroke-dasharray: 0 100;
+    animation: rellenar .35s linear forwards;
+}
+
+#tablaAsistenciaAnual button {
+    background-color: crimson;
+    border-radius: 5px;
+    border: 1px solid crimson;
+    padding: 5px;
+}
+
+#tableDatosPersonales {
+    font-size: 0.9em;
+
+}
+
+.buttons-container {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 3px;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* Colores diferentes para cada botón */
+.button:nth-child(1) {
+    background-color: #66ff47;
+    color: white;
+}
+
+.button:nth-child(2) {
+    background-color: #ff0000;
+    color: white;
+}
+
+.button:nth-child(3) {
+    background-color: #20B2AA;
+    color: white;
+}
+
+.button:nth-child(4) {
+    background-color: #FFA500;
+    color: white;
+}
+
+.button:nth-child(5) {
+    background-color: #9370DB;
+    color: white;
+}
+
+.button:nth-child(6) {
+    background-color: #FFD700;
+    color: white;
+}
+
+.button:nth-child(7) {
+    background-color: #32CD32;
+    color: white;
+}
+
+.button:nth-child(8) {
+    background-color: #1E90FF;
+    color: white;
+}
+
+.button:nth-child(9) {
+    background-color: #FF69B4;
+    color: white;
+}
+
+.button:nth-child(10) {
+    background-color: #dd00ff;
+    color: white;
+}
+
+.button:nth-child(11) {
+    background-color: #dd00ff;
+    color: white;
+}
+
+.button:nth-child(12) {
+    background-color: #55bdea;
+    color: white;
+}
+
+.button:nth-child(13) {
+    background-color: #6048ff;
+    color: white;
+}
+
+.button:nth-child(14) {
+    background-color: #ea7d55;
+    color: white;
+}
+
+#tablaRegistroItinerancias td,
+#tablaRegistroItinerancias th {
+    font-size: 12px;
+}
+
+#mainTable {
+    width: 20%;
+}
+
+#mainTable input {
+    border: 0;
+    outline: none;
+    background-color: white;
+    color: black;
+}
+
+h3 {
+    text-align: center;
+}
+
+#tablesContainer table {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}

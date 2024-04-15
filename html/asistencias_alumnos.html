@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ESTILO CSS-->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <!--Html2 Canvas-->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!--FONTS GOOGLE-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--BOOTSTRAP ICON-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--TITULO DE LA PAGINA-->
+    <title>Asistencia de Alumnos</title>
+</head>
+
+<body>
+    <!--NAVEGADOR-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="inicio.html">
+                <img src="../assets/Logo_2.PNG" class="img-" width="70" alt="Logo">
+                Escuela Secundaria Rural N°4 E.V.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menú de navegación</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../html/inicio.html"><i
+                                    class="bi bi-house-fill"></i>
+                                Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-calendar-week-fill"></i> Itinerancias
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item text-light bg-dark" href="../html/registro_materias.html">Registro de materias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item text-light bg-dark" href="../html/secuencias.html">Secuencias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item text-light bg-dark" href="../html/itinerancias_mes.html">Itinerancias por mes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-person-workspace"></i> Registro Docente
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item bg-dark text-light"
+                                        href="../html/asistenciaMes_docente.html">Asistencia por Mes</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item bg-dark text-light"
+                                        href="../html/asistenciaAnual_docente.html">Asistencia Anual</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active text-primary" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-backpack2-fill"></i> Registro de Alumnos
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item bg-dark text-secondary"
+                                        href="../html/datos_alumno.html">Datos
+                                        del Alumno</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item bg-dark text-secondary"
+                                        href="../html/datos_tutor.html">Datos
+                                        del Tutor</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item bg-dark text-primary active"
+                                        href="../html/asistencias_alumnos.html">Asistencias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item bg-dark text-secondary"
+                                        href="../html/calificaciones_alumnos.html">Calificaciones</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/sedes.html"><i class="bi bi-buildings-fill"></i> Sedes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="../index.html">
+                <button type="button" class="btn bg-primary text-light"><i class="bi bi-power"></i> Cerrar
+                    Sesion</button>
+            </a>
+        </div>
+    </nav>
+    <main class="container">
+        <h1 class="text-center p-4">REGISTRO DE ASISTENCIA DE ALUMNOS</h1>
+        <ul class="list-group list-group-horizontal d-flex justify-content-center mb-4">
+            <li class="list-group-item col-md-10">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item active rounded-1">
+                        <b><i class="bi bi-check2-square"></i> Asistencia del alumno</b>
+                    </li>
+                    <li class="list-group-item mb-4">
+                        <form class="row" id="datos">
+                            <div class="d-flex justify-content-center mb-3">
+                                <div class="col-md-4 pe-2">
+                                    <label for="curso">Año</label>
+                                    <input type="text" class="form-control" name="curso" id="curso">
+                                    <div id="mensaje" class="form-text">Ingrese el año que cursa el alumno</div>
+                                </div>
+                                <div class="col-md-4 pe-2">
+                                    <label for="division">División</label>
+                                    <input type="text" class="form-control" name="division" id="division">
+                                    <div id="mensaje" class="form-text">Ingrese la división</div>
+                                </div>
+                                <div class="col-md-4">
+                                        <label for="turno">Turno</label>
+                                        <input type="text" class="form-control" name="turno" id="turno">
+                                        <div id="mensaje" class="form-text">Ingrese el turno</div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mb-3">
+                                <div class="col-md-6 pe-2">
+                                    <label for="NyA-3">Alumno</label>
+                                    <input type="text" name="NyA-3" class="form-control" id="NyA-3">
+                                    <div id="mensaje" class="form-text">Ingrese nombre y apellido del alumno</div>
+                                </div>
+                                <!--Numero de orden-->
+                                <div class="col-md-2 pe-2">
+                                    <label for="nroOrden-3">Nro. de Orden</label>
+                                    <input type="number" class="form-control" name="nroOrden-3" id="nroOrden-3" min="1">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="selectMes">
+                                        <label>Mes</label>
+                                        <select name="meses" id="mes" class="form-select">
+                                            <option selected>Seleccionar mes</option>
+                                            <option value="Marzo">Marzo</option>
+                                            <option value="Abril">Abril</option>
+                                            <option value="Mayo">Mayo</option>
+                                            <option value="Junio">Junio</option>
+                                            <option value="Julio">Julio</option>
+                                            <option value="Agosto">Agosto</option>
+                                            <option value="Septiembre">Septiembre</option>
+                                            <option value="Octubre">Octubre</option>
+                                            <option value="Noviembre">Noviembre</option>
+                                            <option value="Diciembre">Diciembre</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mb-3">
+                                <div class="col-md-12">
+                                    <p class="card-text">Selecciones los días presentes y ausentes del mes seleccionado
+                                    </p>
+                                    <!--Tabla de registro de asistencia-->
+                                    <table class="table table-bordered border-secondary text-center">
+                                        <tr>
+                                            <th class="bg-primary">1</th>
+                                            <th class="bg-primary">2</th>
+                                            <th class="bg-primary">3</th>
+                                            <th class="bg-primary">4</th>
+                                            <th class="bg-primary">5</th>
+                                            <th class="bg-primary">6</th>
+                                            <th class="bg-primary">7</th>
+                                            <th class="bg-primary">8</th>
+                                            <th class="bg-primary">9</th>
+                                            <th class="bg-primary">10</th>
+                                            <th class="bg-primary">11</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <select name="asistencia1" id="asistencia1">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia2" id="asistencia2">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia3" id="asistencia3">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia4" id="asistencia4">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia5" id="asistencia5">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia6" id="asistencia6">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia7" id="asistencia7">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia8" id="asistencia8">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia9" id="asistencia9">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia10" id="asistencia10">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia11" id="asistencia11">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="bg-primary">12</th>
+                                                <th class="bg-primary">13</th>
+                                                <th class="bg-primary">14</th>
+                                                <th class="bg-primary">15</th>
+                                                <th class="bg-primary">16</th>
+                                                <th class="bg-primary">17</th>
+                                                <th class="bg-primary">18</th>
+                                                <th class="bg-primary">19</th>
+                                                <th class="bg-primary">20</th>
+                                                <th class="bg-primary">21</th>
+                                                <th class="bg-primary">22</th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <select name="asistencia12" id="asistencia12">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia13" id="asistencia13">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia14" id="asistencia14">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia15" id="asistencia15">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia16" id="asistencia16">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia17" id="asistencia17">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia18" id="asistencia18">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia19" id="asistencia19">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia20" id="asistencia20">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia21" id="asistencia21">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia22" id="asistencia22">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="bg-primary">23</th>
+                                                <th class="bg-primary">24</th>
+                                                <th class="bg-primary">25</th>
+                                                <th class="bg-primary">26</th>
+                                                <th class="bg-primary">27</th>
+                                                <th class="bg-primary">28</th>
+                                                <th class="bg-primary">29</th>
+                                                <th class="bg-primary">30</th>
+                                                <th class="bg-primary">31</th>
+                                                <th class="bg-secondary border-secondary"></th>
+                                                <th class="bg-secondary border-secondary"></th>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <select name="asistencia23" id="asistencia23">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia24" id="asistencia24">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia25" id="asistencia25">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia26" id="asistencia26">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia27" id="asistencia27">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia28" id="asistencia28">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia29" id="asistencia29">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia30" id="asistencia30">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select name="asistencia31" id="asistencia31">
+                                                        <option value="-">-</option>
+                                                        <option value="P">P</option>
+                                                        <option value="A">A</option>
+                                                    </select>
+                                                </td>
+                                                <td class="bg-secondary"></td>
+                                                <td class="bg-secondary"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mb-3">
+                                <div class="col-md-4 pe-2">
+                                    <label for="justificadas">Justificadas</label>
+                                    <input type="number" name="justificadas" class="form-control" id="justificadas">
+                                    <div id="mensaje" class="form-text">Ingrese la cantidad de inasistencias
+                                        justificadas</div>
+                                </div>
+                                <div class="col-md-4 pe-2">
+                                    <label for="anterior">Anterior</label>
+                                    <input type="number" name="anterior" class="form-control" id="anterior">
+                                    <div id="mensaje" class="form-text">Ingrese las inasistencias anteriores</div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="amonestaciones">Amonestaciones</label>
+                                    <input type="number" name="amonestaciones" class="form-control" id="amonestaciones">
+                                    <div id="mensaje" class="form-text">Ingrese la cantidad de amonestaciones</div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mb-3">
+                                <div class="col-md-8">
+                                    <label for="observaciones">Observaciones</label>
+                                    <input type="text" name="observaciones" class="form-control" id="observaciones">
+                                    <div id="mensaje" class="form-text">Ingrese las observaciones realizadas</div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mb-3">
+
+                                <button class="btn btn-primary" type="submit" onclick="asistencia()"><i
+                                        class="bi bi-calendar3"></i> Generar datos</button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="container mb-3" id="tablaAsistencia-Alumnos">
+            <h2 class="text-center mb-3">Tabla de Asistencias de Alumnos</h2>
+            <div id="asistencia"></div>
+            <!--Tabla de registro de asistencia diaria-->
+            <div class="container col-md-12 mb-5">
+                <table class="table table-bordered border-dark text-center mb-3" id="tablaAsistencia-1">
+                    <thead>
+                        <tr class="table-active bg-secondary">
+                            <th>Orden</th>
+                            <th>Alumno</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <table class="table table-bordered border-dark text-center mb-3" id="tablaAsistencia-2">
+                    <thead>
+                        <tr class="table-active bg-secondary">
+                            <th>11</th>
+                            <th>12</th>
+                            <th>13</th>
+                            <th>14</th>
+                            <th>15</th>
+                            <th>16</th>
+                            <th>17</th>
+                            <th>18</th>
+                            <th>19</th>
+                            <th>20</th>
+                            <th>21</th>
+                            <th>22</th>
+                            <th>23</th>
+                            <th>24</th>
+                            <th>25</th>
+                            <th>26</th>
+                            <th>27</th>
+                            <th>28</th>
+                            <th>29</th>
+                            <th>30</th>
+                            <th>31</th>
+
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <table class="table table-bordered border-dark text-center mb-3" id="tablaAsistencia-3">
+                    <thead>
+                        <tr class="table-active bg-secondary">
+                            <th>Asistencias</th>
+                            <th>Justificadas</th>
+                            <th>Injustificadas</th>
+                            <th>Anterior</th>
+                            <th>Total</th>
+                            <th>Amonestaciones</th>
+                            <th>Observaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div id="boton-descargar" class="mb-5"></div>
+    </main>
+    <footer class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11">
+                    <h6 class="text-light mt-3 mb-2"><i class="bi bi-c-circle"></i> 2024 Ministerio de Educación de
+                        Jujuy</h6>
+                    <p class="text-light mb-1"><i class="bi bi-signpost-split-fill"></i> Sede Central: Coronel Otero 188
+                        Zona Centro - S.S. de Jujuy</p>
+                    <p class="text-light mb-1"><i class="bi bi-envelope-fill"></i> Correo: secundariarural14@gmail.com
+                    </p>
+                    <p class="text-light mb-2"><i class="fa-solid fa-terminal"></i> Diseñado por Maicol Daniel Mamani
+                        Chalco - <i class="bi bi-window-stack"></i> <a
+                            href="https://www.tudiseñoweb.com">www.tudiseñoweb.com</a></p>
+                </div>
+                <div class="col-md-1 mt-3 mb-3">
+                    <img src="../assets/Logo.PNG" width="70" alt="Logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!--BOOTSTRAP-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="../js/asistencia_alumnos.js"></script>
+</html>

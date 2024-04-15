@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ESTILO CSS-->
+    <link rel="stylesheet" href="../css/estilo.css">
+     <!--Html2 Canvas-->
+     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!--FONTS GOOGLE-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--BOOTSTRAP ICON-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--TITULO DE LA PAGINA-->
+    <title>Calificaciones de Alumnos</title>
+</head>
+
+<body>
+    <!--NAVEGADOR-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="inicio.html">
+                <img src="../assets/Logo_2.PNG" class="img-" width="70" alt="Logo">
+                Escuela Secundaria Rural N°4 E.V.
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
+                aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+                aria-labelledby="offcanvasNavbar2Label">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menú de navegación</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../html/inicio.html"><i
+                                    class="bi bi-house-fill"></i>
+                                Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-calendar-week-fill"></i> Itinerancias
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item text-light bg-dark" href="../html/registro_materias.html">Registro de materias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item text-light bg-dark" href="../html/secuencias.html">Secuencias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item text-light bg-dark" href="../html/itinerancias_mes.html">Itinerancias por mes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-person-workspace"></i> Registro Docente
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item bg-dark text-light"
+                                        href="../html/asistenciaMes_docente.html">Asistencia por Mes</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item bg-dark text-light"
+                                        href="../html/asistenciaAnual_docente.html">Asistencia Anual</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active text-primary" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-backpack2-fill"></i> Registro de Alumnos
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a class="dropdown-item bg-dark text-secondary"
+                                        href="../html/datos_alumno.html">Datos
+                                        del Alumno</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item bg-dark text-secondary"
+                                        href="../html/datos_tutor.html">Datos
+                                        del Tutor</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item bg-dark text-secondary"
+                                        href="../html/asistencias_alumnos.html">Asistencias</a></li>
+                                <li>
+                                    <hr class="dropdown-divider bg-secondary">
+                                </li>
+                                <li><a class="dropdown-item bg-dark text-primary active"
+                                        href="../html/calificaciones_alumnos.html">Calificaciones</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../html/sedes.html"><i class="bi bi-buildings-fill"></i> Sedes</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a href="../index.html">
+                <button type="button" class="btn bg-primary text-light"><i class="bi bi-power"></i> Cerrar
+                    Sesion</button>
+            </a>
+        </div>
+    </nav>
+    <main class="container">
+        <h1 class="text-center p-4">REGISTRO DE CALIFICACIONES DE ALUMNOS</h1>
+        <ul class="list-group list-group-horizontal d-flex justify-content-center mb-5">
+            <li class="list-group-item col-md-10">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <form class="row" id="datos">
+                            <div class="list-group-item active mb-3 rounded-1">
+                                <b><i class="bi bi-check2-square"></i> Datos del alumno</b>
+                            </div>
+                            <div class="d-flex justify-content-center mb-3">
+                                <div class="col-md-4 pe-2">
+                                    <label for="curso">Año</label>
+                                    <input type="text" class="form-control" name="curso" id="curso">
+                                    <div id="mensaje" class="form-text">Ingrese el año que cursa el alumno</div>
+                                </div>
+                                <div class="col-md-4 pe-2">
+                                    <label for="division">División</label>
+                                    <input type="text" class="form-control" name="division" id="division">
+                                    <div id="mensaje" class="form-text">Ingrese la división</div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="turno">Turno</label>
+                                    <input type="text" class="form-control" name="turno" id="turno">
+                                    <div id="mensaje" class="form-text">Ingrese el turno</div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mb-3">
+                                <!--Alumno-->
+                                <div class="col-md-6 pe-2">
+                                    <label for="alumno">Alumno</label>
+                                    <input type="text" class="form-control" name="alumno" id="alumno">
+                                    <div id="mensaje" class="form-text">Ingrese el nombre y apellido del alumno</div>
+                                </div>
+                                <!--Nro. de matrícula-->
+                                <div class="col-md-2 pe-2">
+                                    <label for="matricula">Matricula</label>
+                                    <input type="number" class="form-control" name="matricula" id="matricula">
+                                    <div id="mensaje" class="form-text">Nro. de matrícula</div>
+                                </div>
+                                <!--Lo-->
+                                <div class="col-md-2 pe-2">
+                                    <label for="lo">Lo</label>
+                                    <input type="text" class="form-control" name="lo" id="lo">
+                                    <div id="mensaje" class="form-text">Libro</div>
+                                </div>
+                                <!--Folio-->
+                                <div class="col-md-2 pe-2">
+                                    <label for="fo">Fo</label>
+                                    <input type="text" class="form-control" name="fo" id="fo">
+                                    <div id="mensaje" class="form-text">Folio</div>
+                                </div>
+                            </div>
+                            <div class="list-group-item active mb-3 rounded-1">
+                                <b><i class="bi bi-check2-square"></i> Materias y Calificaciones del Alumno</b>
+                            </div>
+                            <div class="d-flex justify-content-center mb-3">
+                                <!--Asignatura-->
+                                <div class="col-md-6 pe-2">
+                                    <label for="asignatura">Asignatura</label>
+                                    <input type="text" class="form-control" name="asignatura" id="asignatura">
+                                    <div id="mensaje" class="form-text">Nombre de la asignatura</div>
+                                </div>
+                                <!--Periodos lectivos-->
+                                <!--1º-->
+                                <div class="col-md-2 pe-2">
+                                    <label for="primero">1º</label>
+                                    <input type="number" class="form-control" name="primero" id="primero" step="0.01"
+                                        min="0" max="10">
+                                    <div id="mensaje" class="form-text">Per. período lectivo</div>
+                                </div>
+                                <!--2º-->
+                                <div class="col-md-2 pe-2">
+                                    <label for="segundo">2º</label>
+                                    <input type="number" class="form-control" name="segundo" id="segundo" step="0.01"
+                                        min="0" max="10">
+                                    <div id="mensaje" class="form-text">Sdo. período lectivo</div>
+                                </div>
+                                <!--3º-->
+                                <div class="col-md-2 pe-2">
+                                    <label for="tercero">3º</label>
+                                    <input type="number" class="form-control" name="tercero" id="tercero" step="0.01"
+                                        min="0" max="10">
+                                    <div id="mensaje" class="form-text">Ter. período lectivo</div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mb-3">
+                                <!--Diciembre-->
+                                <div class="col-md-2 pe-2">
+                                    <label for="diciembre">Diciembre</label>
+                                    <input type="number" class="form-control" name="diciembre" id="diciembre"
+                                        step="0.01" min="0" max="10">
+                                    <div id="mensaje" class="form-text">Exámen de Diciembre</div>
+                                </div>
+                                <!--Marzo-->
+                                <div class="col-md-2 pe-2">
+                                    <label for="marzo">Marzo</label>
+                                    <input type="number" class="form-control" name="marzo" id="marzo" step="0.01"
+                                        min="0" max="10">
+                                    <div id="mensaje" class="form-text">Exámen de Marzo</div>
+                                </div>
+                                <!--Observaciones-->
+                                <div class="col-md-8 pe-2">
+                                    <label for="observaciones">Observaciones</label>
+                                    <input type="text" class="form-control" name="observaciones" id="observaciones">
+                                    <div id="mensaje" class="form-text">Notas de observación del alumno</div>
+                                </div>
+                            </div>
+                            <div class="list-group-item active mb-3 rounded-1">
+                                <b><i class="bi bi-check2-square"></i> Previas y Conceptos</b>
+                            </div>
+                            <div class="d-flex justify-content-center mb-5">
+                                <div class="col-md-6 pe-2">
+                                    <label for="previas">Previas</label>
+                                    <input type="text" class="form-control" name="previas" id="previas">
+                                    <div id="mensaje" class="form-text">Materias previas</div>
+                                </div>
+                                <div class="col-md-3 pe-2">
+                                    <label for="primero">1º</label>
+                                    <input type="text" class="form-control" name="primero" id="primero">
+                                    <div id="mensaje" class="form-text">Primer concepto</div>
+                                </div>
+                                <div class="col-md-3 pe-2">
+                                    <label for="segundo">2º</label>
+                                    <input type="text" class="form-control" name="segundo" id="segundo">
+                                    <div id="mensaje" class="form-text">Segundo concepto</div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center mb-3">
+                                <button class="btn btn-primary" type="submit" onclick="ingresarDatos(), ingresarDatos2()"><i
+                                    class="bi bi-calendar3"></i> Generar datos</button>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="container mb-5" id="tablaCalificaciones-Alumnos">
+            <h2 class="text-center mb-3">Tabla de Calificaciones de Alumnos</h2>
+            <div id="asistencia" class="mb-3"></div>
+            <div class="container col-md-12 mb-5">
+                <table class="table table-bordered border-dark text-center mb-3" id="tablaCalificaciones">
+                    <thead>
+                        <tr class="table-active bg-secondary">
+                            <th rowspan="2">Asignatura</th>
+                            <th colspan="3">Períodos lectivos</th>
+                            <th rowspan="2" class="texto">Calif. Anual</th>
+                            <th rowspan="2" class="texto">Diciembre</th>
+                            <th rowspan="2" class="texto">Marzo</th>
+                            <th rowspan="2" class="texto">Calif. Definitiva</th>
+                            <th rowspan="2" class="texto">Observaciones</th>
+                            <th rowspan="2" class="texto">Acciones</th>
+                        </tr>
+                        <tr class="table-active bg-secondary">
+                            <th>1º</th>
+                            <th>2º</th>
+                            <th>3º</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <div id="previa" class="mb-5"></div>
+            </div>
+            <div id="boton-descargar" class="mb-5"></div>
+        </div>
+    </main>
+    <footer class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11">
+                    <h6 class="text-light mt-3 mb-2"><i class="bi bi-c-circle"></i> 2024 Ministerio de Educación de
+                        Jujuy</h6>
+                    <p class="text-light mb-1"><i class="bi bi-signpost-split-fill"></i> Sede Central: Coronel Otero 188
+                        Zona Centro - S.S. de Jujuy</p>
+                    <p class="text-light mb-1"><i class="bi bi-envelope-fill"></i> Correo: secundariarural14@gmail.com
+                    </p>
+                    <p class="text-light mb-2"><i class="fa-solid fa-terminal"></i> Diseñado por Maicol Daniel Mamani
+                        Chalco - <i class="bi bi-window-stack"></i> <a
+                            href="https://www.tudiseñoweb.com">www.tudiseñoweb.com</a></p>
+                </div>
+                <div class="col-md-1 mt-3 mb-3">
+                    <img src="../assets/Logo.PNG" width="70" alt="Logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!--BOOTSTRAP-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="../js/calificaciones_alumnos.js"></script>
+</html>

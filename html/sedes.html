@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ESTILO CSS-->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--FONTS GOOGLE-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--BOOTSTRAP ICON-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--TITULO DE LA PAGINA-->
+    <title>Sedes</title>
+</head>
+<body>
+    <header>
+        <!--NAVEGADOR-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Offcanvas navbar large">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="inicio.html">
+                    <img src="../assets/Logo_2.PNG" class="img-" width="70" alt="Logo">
+                    Escuela Secundaria Rural N°4 E.V.
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2"
+                    aria-labelledby="offcanvasNavbar2Label">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menú de navegación</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../html/inicio.html"><i class="bi bi-house-fill"></i>
+                                    Inicio</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="bi bi-calendar-week-fill"></i> Itinerancias
+                                </a>
+                                <ul class="dropdown-menu bg-dark">
+                                    <li><a class="dropdown-item text-light bg-dark" href="../html/registro_materias.html">Registro de materias</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider bg-secondary">
+                                    </li>
+                                    <li><a class="dropdown-item text-light bg-dark" href="../html/secuencias.html">Secuencias</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider bg-secondary">
+                                    </li>
+                                    <li><a class="dropdown-item text-light bg-dark" href="../html/itinerancias_mes.html">Itinerancias por mes</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="bi bi-person-workspace"></i> Registro Docente
+                                </a>
+                                <ul class="dropdown-menu bg-dark">
+                                    <li><a class="dropdown-item bg-dark text-light" href="../html/asistenciaMes_docente.html">Asistencia por Mes</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider bg-secondary">
+                                    </li>
+                                    <li><a class="dropdown-item text-light bg-dark" href="../html/asistenciaAnual_docente.html">Asistencia Anual</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="bi bi-backpack2-fill"></i> Registro de Alumnos
+                                </a>
+                                <ul class="dropdown-menu bg-dark">
+                                    <li><a class="dropdown-item bg-dark text-light" href="../html/asistencias_alumnos.html">Asistencias</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider bg-secondary">
+                                    </li>
+                                    <li><a class="dropdown-item bg-dark text-light" href="../html/calificaciones_alumnos.html">Calificaciones</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active text-primary" href="../html/sedes.html"><i class="bi bi-buildings-fill"></i> Sedes</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="../index.html">
+                    <button type="button" class="btn bg-primary text-light"><i class="bi bi-power"></i> Cerrar
+                        Sesion</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <h1 class="text-center text-dark p-4">SEDES</h1>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="card mb-5" style="max-width: 980px;">
+                <div class="row g-0">
+                <div class="col-md-8">
+                    <img src="../assets/Sedes.png" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-4">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3 text-center">CUE SEDES LOCALES</h5>
+                        <ul>
+                            <li class="mb-2"><b>Termas de Reyes</b> 380150-01</li>
+                            <li class="mb-2"><b>Carahunco</b> 380150-02</li>
+                            <li class="mb-2"><b>Tumbaya</b> 380150-03</li>
+                            <li class="mb-2"><b>Manantiales</b> 380150-04</li>
+                            <li class="mb-2"><b>San Juancito</b> 380150-05</li>
+                            <li class="mb-2"><b>La Intermedia</b> 380150-06</li>
+                            <li class="mb-2"><b>Tumbaya Grande</b> 380150-07</li>
+                            <li class="mb-2"><b>El Sunchal</b> 380150-08</li>
+                            <li class="mb-2"><b>León</b> 380150-09</li>
+                            <li class="mb-2"><b>Colonia San José</b> 380150-10</li>
+                            <li class="mb-2"><b>El Perchel</b> 380150-11</li>
+                            <li class="mb-2"><b>Puesto de Marqués</b> 380150-12</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11">
+                    <h6 class="text-light mt-3 mb-2"><i class="bi bi-c-circle"></i> 2024 Ministerio de Educación de Jujuy</h6>
+                    <p class="text-light mb-1"><i class="bi bi-signpost-split-fill"></i> Sede Central: Coronel Otero 188 Zona Centro - S.S. de Jujuy</p>
+                    <p class="text-light mb-1"><i class="bi bi-envelope-fill"></i> Correo: secundariarural14@gmail.com</p>
+                    <p class="text-light mb-2"><i class="fa-solid fa-terminal"></i> Diseñado por Maicol Daniel Mamani Chalco - <i class="bi bi-window-stack"></i> <a href="https://www.tudiseñoweb.com">www.tudiseñoweb.com</a></p>
+                </div>
+                <div class="col-md-1 mt-3 mb-3">
+                    <img src="../assets/Logo.PNG" width="70" alt="Logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!--BOOTSTRAP-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</html>
