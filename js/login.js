@@ -6,9 +6,10 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   // Validación de usuario y contraseña
   if (username === 'Rural4' && password === 'rural4') {
     // Usuario y contraseña válidos, redireccionar a otra página
-    window.location.href = '../html/inicio.html';
+    window.location.href = 'html/inicio.html';
   } else {
     // Mostrar mensaje de alerta
     alert('Nombre de usuario o contraseña incorrecto');
   }
 });
+
